@@ -1,0 +1,655 @@
+.App {
+  text-align: center;
+  font-family: 'Lucida Grande';
+  /* border: 1px solid red;  */
+
+}
+
+.App {
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+
+}
+
+.header-icon {
+  font-size: 40px;
+  color: #00b300;
+}
+
+.login-title, .signup-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.title-icon {        /* for login and signup pages*/
+  font-size: 90px;
+  color: #00b300;
+}
+
+.welcome-image {
+  height: auto;
+  width: 60vw;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+.welcome-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.welcome-message {
+    width: 40vw;
+    height: 30vh;
+    position: absolute;
+    left:10px;
+    top: 70px;
+    z-index: 100;
+    /* border: 1px red solid; */
+}
+
+.meals-prepped {
+   width: 40vw;
+    position: absolute;
+    left:10px;
+    top: 38vh;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: xx-large;
+    color: green;
+}
+
+.join-message {
+    width: 35vw;
+    height: 30vh;
+    position: absolute;
+    left:10px;
+    top: 55vh;
+    z-index: 100;
+    /* border: 1px red solid; */
+    text-align: center;
+}
+
+
+.join-message div.join-inner {
+  width: 25vw;
+  margin-top: -5px;
+  margin-left: 46px;
+  /* border: 1px red solid; */
+  /* padding: 30px 0; */
+}
+
+.join-message div.join-inner .join {
+  font-weight: bold;
+  font-size: medium;
+  width: fit-content;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 1px red solid;  */
+}
+
+.join-button, .signup-button {
+  border-radius: 25px;
+  padding: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.add-post-button {
+  border-radius: 25px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.email-input, .password-input, .confirm-password-input, .username-input {
+  width: 30vw;
+  height: 50px;
+}
+
+.home-page {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-evenly;
+  /* border: 1px solid blue; */
+  width: 100vw;
+  position: relative;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  padding:0;
+}
+
+.home-page .left-div {
+  /* background-color: #f0f2f4; */
+  /* background-color:  #99a7b2; */
+  padding: 10px;
+  flex: 25%;
+  position: relative;
+
+} 
+
+.home-page .left-div  .account-settings {
+  margin-top: 20px;
+  position:fixed;
+  top: 0;
+  left:40px;
+   z-index: 1001;
+  /* opacity: 1; */
+  /* border: 1px solid blue; */
+
+}
+
+.home-page .left-div  .account-settings .drop-down {
+  /* background-color: #00b300; */
+  position: absolute;
+  top: 0;
+  left:0;
+  opacity: 1;
+  z-index: 1001;
+  width: 300px;
+  background-color: #f0f2f4;
+  color: #4d5b66;
+  font-weight: 900;
+  /* height: 400px; */
+}
+
+
+.home-page .left-div  .account-settings .drop-down .item {
+  /* display: inline; */
+
+}
+
+.home-page .left-div .user-profile {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 75px;
+  /* border: 1px solid red; */
+  position:fixed;
+  top: 0;
+  left:20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid  #b6c0c8;
+  border-bottom: 1px solid  #b6c0c8;
+ 
+
+}
+
+.home-page .left-div .user-profile .user-image {
+   flex: 45%;
+   font-size: 120px;
+   color:#7699bc;
+   /* border: 1px solid red; */
+   display: flex;
+   align-items: initial;
+}
+
+
+/*
+TO DO: ADD user profile image styling here
+*/
+
+.home-page .left-div .user-profile .user-profile-info {
+  flex: 55%;
+  /* border: 1px solid red; */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.home-page .left-div .user-profile .user-profile-info .user-profile-name {
+   font-size: 24px;
+   font-weight: 900;
+}
+
+.home-page .left-div .user-profile .user-profile-info .user-profile-joined {
+  font-size: 22px;
+  color: #4d5b66;
+  
+}
+
+.home-page .left-div .user-profile .user-profile-info .user-profile-posts {
+
+  font-size: 22px;
+  color: #4d5b66;
+  
+}
+
+.home-page .left-div .user-profile .user-profile-info .user-profile-fans {
+
+  font-size: 22px;
+  color: #4d5b66;
+  
+}
+
+.home-page .left-div .user-profile .user-profile-info .user-profile-faves {
+
+  font-size: 22px;
+  color: #4d5b66;
+  
+}
+
+.home-page .left-div .user-profile .user-profile-info .user-profile-messages {
+  font-size: 22px;
+  color: #4d5b66;
+}
+
+.home-page .left-div .user-profile .user-profile-info .user-profile-messages .un-read {
+  color: 	 #00b300;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position: relative;
+  top: -5px;
+
+}
+
+.home-page .left-div .user-profile .user-profile-info .user-settings {
+  font-size: 22px;
+  color: #4d5b66;
+}
+
+.home-page .left-div .user-profile .user-profile-info b {
+  font-size: 16px;
+  font-weight: 800;
+  position: relative;
+  /* top: 2px; */
+  left: -3px;
+}
+
+.home-page .center-div {
+  padding: 0;
+  flex: 45%;
+  /* border: 1px solid green; */
+}
+
+.home-page .right-div {
+  /* background-color: #f0f2f4; */
+  padding: 10px;
+  flex: 30%;
+  /* position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  bottom:0; */
+  /* border: 1px solid red;  */
+  
+}
+
+.home-page .right-div .right-container {
+  /* border: 1px solid red; */
+  position:fixed;
+  top: 5px;
+  bottom: 0;
+  /* right: 20px; */
+}
+
+.home-page .right-div .search-div {
+   border: 1px solid #ffffff;
+   border-radius:  25px;
+   /* background-color:#fff; */
+   background-color: #4d5b66;
+   padding: 2px 2px 2px 15px;
+   display: flex;
+   align-items: center;
+     
+}
+
+.home-page .right-div .search-div .search-icon-div {
+   flex: 5%;
+   font-size: 20px;
+   padding:0;
+   color: #6e8291;
+   text-align: left;
+   background-color: #4d5b66;
+   color: #ffffff;
+   /* border: 1px solid red; */
+}
+
+.home-page .right-div .search-div .search-form {
+  padding:0;
+  flex: 87%;
+}
+
+.home-page .right-div .search-div .search-form .search-input {
+  /* background-color: #ffffff; */
+  background-color: #4d5b66;
+  border: none;
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.home-page .right-div .search-div .search-form .search-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:  #99a7b2;
+  opacity: 1; /* Firefox */
+}
+
+.home-page .right-div .search-div .search-form .search-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:  #99a7b2;
+}
+
+.home-page .right-div .search-div .search-form .search-input::-ms-input-placeholder { /* Microsoft Edge */
+  color:  #99a7b2;
+}
+
+.home-page .right-div .search-div .search-input:focus {
+   outline: none;
+  border: none;
+  border-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.home-page .right-div .search-div .clear-search-icon-div {
+   flex: 8%;
+   font-size: 30px;
+   padding:0;
+   /* color: #6e8291; */
+   color: #ffffff;
+   /* border: 1px solid red; */
+   display: flex;
+   align-items: center;
+}
+
+.home-page .right-div .popular-cooks-list {
+   padding-top: 10px;
+   padding-bottom: 40px;
+   margin-top: 20px;
+   border-top: 1px solid  #b6c0c8;
+   border-bottom: 1px solid  #b6c0c8;
+
+}
+
+.home-page .right-div .popular-cooks-list .popular-cooks-title { 
+  font-weight: bold;
+  color: #00b300;
+
+}
+
+.home-page .right-div .popular-cooks-list .popular-cook {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid  #b6c0c8;
+
+}
+
+
+.home-page .right-div .popular-cooks-list .popular-cook .cook-image {
+  flex: 5%;
+  font-size: 50px;
+  color:#7699bc;
+  /* border: 1px solid red; */
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 5px;
+
+}
+
+
+.home-page .right-div .popular-cooks-list .popular-cook .cook-info {
+  flex: 87%;
+  padding: 10px 5px;
+  /* border: 1px solid red; */
+  text-align: left;
+
+}
+
+.home-page .right-div .popular-cooks-list .popular-cook .cook-info .user-name {
+   font-weight: 900;
+   font-size: 20px;
+}
+
+.home-page .right-div .popular-cooks-list .popular-cook .cook-info .fans-posts-div {
+   display: flex;
+   justify-content: space-evenly;
+   /* border: 1px solid blue; */
+   margin-top: -12px;
+
+}
+
+.home-page .right-div .popular-cooks-list .popular-cook .cook-info .fans-posts-div .user-posts {
+   font-size: 22px;
+   color: #4d5b66;
+
+}
+
+.home-page .right-div .popular-cooks-list .popular-cook .cook-info .fans-posts-div .user-fans {
+   font-size: 22px;
+  color: #4d5b66;
+
+}
+
+.home-page .right-div .popular-cooks-list .popular-cook .cook-info b {
+
+  font-size: 14px;
+  font-weight: 800;
+  position: relative;
+  color: #4d5b66;
+  /* top: 2px; */
+  left: -3px;
+}
+
+
+.home-page .right-div .popular-cooks-list .popular-cook .follow {
+  flex: 8%;
+  padding: 10px 0;
+  /* border: 1px solid red; */
+   
+}
+
+.home-page .right-div .popular-cooks-list .popular-cook .follow .follow-button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 1px 10px;
+}
+
+.home-page .right-div .popular-cooks-list .show-more {
+   font-size: 16px;
+   font-weight: 900;
+   border-top: 1px solid  #b6c0c8;
+   padding: 40px 5px 10px 5px;
+}
+
+.home-page .center-div .posts-title {
+  font-weight: bold;
+  /* border: 1px solid red; */
+  padding: 20px;
+  margin: auto;
+   border-left: 1px solid #f0f2f4;
+   border-right: 1px solid #f0f2f4;
+  border-bottom: 2px solid #f0f2f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.posts-list {
+   /* border: 1px solid blue; */
+   padding-top:20px;
+   padding-bottom: 20px;
+   border-left: 1px solid #f0f2f4;
+   border-right: 1px solid #f0f2f4;
+}
+
+
+
+.post {
+   display: flex;
+   border-bottom: 1px solid #f0f2f4;
+   /* border: 1px solid red; */
+   padding: 0 5px;
+}
+
+.post .creator-thumb {
+   font-size: 50px;
+   color:#7699bc;
+   /* border: 1px solid red; */
+   height: 100%;
+   display: flex;
+   align-items: flex-start;
+   padding-top: 5px;
+}
+
+.post .post-info {
+  /* border: 1px solid red; */
+  padding: 0 5px; 
+} 
+
+
+.post .post-info .post-creator-info {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+  padding: 0;
+}
+
+
+.post .post-info .post-creator-info .creator-name {
+  font-weight: bolder;
+  font-size: 18px;
+  /* border: 1px solid red; */
+  
+}
+
+.post .post-info .post-creator-info .divider {
+  font-size: large;
+  color: #6e8291;
+  position: relative;
+  top: -3px;
+}
+
+.post .post-creator-info .created-at {
+  color: #6e8291;
+ font-size: 16px;
+  font-weight: 900;
+}
+
+.post .post-info .post-title {
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%; 
+  /* border: 1px solid rgb(158, 157, 165); */
+  margin-top: -10px;
+  text-align: initial;
+  
+}
+
+.post .post-info .post-image {
+  width: 480px;
+  height: auto;
+  border-radius: 10px;
+ 
+}
+
+.add-post {
+  border: 1px solid #b6c0c8;
+  border-radius: 5px;
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left:0;
+  right:0;
+  padding: 20px;
+  width:500px;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-post .add-post-inner {
+  /* border: 1px solid red; */
+}
+
+.add-post .add-post-title {
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.add-post .add-post-inner .post-description-input {
+   width: 400px;
+     margin: auto;
+  /* margin-right: auto; */
+
+}
+
+
+.add-post .add-post-inner .add-post-buttons {
+
+  display: flex;
+  align-items: center;
+
+  
+}
+
+.add-post .add-post-inner .upload-button {
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.add-post .add-post-inner .image-upload {
+  font-size: x-large;
+}
+
+.add-post .add-post-inner .save-post-button, .add-post .add-post-inner .cancel-post-button {
+  border-radius: 25px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+
+}
+
+
+
+.reaction-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #6e8291;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  /* border: 1px solid red; */
+}
+
+.reaction-buttons div {
+  /* border: 1px solid red; */
+  width: 33%;
+}
+.reaction-buttons div b {
+  font-size: 14px;
+
+}
+
+

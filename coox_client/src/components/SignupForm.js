@@ -28,14 +28,23 @@ const SignupForm = () => {
             password
           }).then(function (response) {
 
-            alert(response);
+            if (response.data.accessToken) {
+
+            localStorage.setItem("user", JSON.stringify(response.data));
             localStorage.setItem("username", username);
-            window.location.replace("/login"); //redirect to login page
+              window.location.assign("/"); //redirect to home page
+          }
 
 
           }).catch(function (error) {
 
-              console.log(error);
+            if (error.response) {
+
+              alert("Email and Username Should both be Unique");
+              
+            } else {
+            alert('Smething went wrong :(')
+          }
 
           });
         

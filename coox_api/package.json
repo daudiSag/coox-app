@@ -2,9 +2,9 @@
   "name": "cooking-social-api",
   "version": "1.0.0",
   "description": "Application Programming Interface (backend server) for The Cooking Social Media Site Project",
-  "main": "api.js",
+  "main": "app.js",
   "scripts": {
-    "test": "Hello Cooking"
+    "start": "node app.js"
   },
   "author": "daudi sagala",
   "license": "ISC",
@@ -12,11 +12,17 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongodb": "^3.6.2"
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.14",
+    "node-cron": "^2.0.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "12.18.0"
   }
 }

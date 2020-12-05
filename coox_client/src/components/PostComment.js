@@ -1,18 +1,17 @@
 import React from 'react';
 // import lasagna from '../images/lasagnaImage.jpg';
-import PostReaction from './PostReaction.js';
+import CommentReaction from './CommentReaction.js';
 import { FaUserCircle } from 'react-icons/fa';
 import Moment from 'react-moment';
 // import 'moment-timezone';
 let image;
 
-// const API_URL = "http://localhost:3005/";  //api url 
+const API_URL = "http://localhost:3005/";  //api url 
 
-const PostItem = (props) => {
-    if(props.imageUrl) {
+const PostComment = (props) => {
+    if (props.imageUrl) {
 
-       // eslint-disable-next-line jsx-a11y/img-redundant-alt
-       image = <img src={props.imageUrl} className="post-image" alt="Post Image" />
+        image = <img src={props.imageUrl} className="post-image" alt="Post Image" />
 
     } else {
 
@@ -35,9 +34,9 @@ const PostItem = (props) => {
                 <div className="post-title">{props.title}</div>
                 {/* <br></br> */}
                 <div>
-                {image}
+                    {image}
                 </div>
-                <PostReaction postId={props.id} postCreator={props.createdBy} />
+                <CommentReaction commentId={props.id} creator={props.createdBy} />
             </div>
         </div>
 
@@ -45,4 +44,4 @@ const PostItem = (props) => {
 
 }
 
-export default PostItem;
+export default PostComment;

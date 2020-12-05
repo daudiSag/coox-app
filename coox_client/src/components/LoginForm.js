@@ -16,27 +16,29 @@ let usrname;
 
 const LoginForm = () => {
 
-  
- 
     const [username, setUsername] = useState(usrname);
     const [password, setPassword] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // // console.log(`Username:  ${username}`);
-        // console.log(`Password: ${password}`);
             return axios
                 .post(API_URL + "login", {
                     username,
                     password
                 })
                 .then(response => {
+                   // console.log(response);
                     if (response.data.accessToken) {
+                        
                         localStorage.setItem("user", JSON.stringify(response.data));
+                        localStorage.setItem("username", username);
+                         window.location.assign("/posts"); //redirect to posts page
                     }
-                    window.location.replace("/posts"); //redirect to posts page
-                    return response.data;
-                });
+                   // return response.data;
+                })
+                .catch(
+                    () => alert('Authentication Failed!')
+                );
 
     }
 

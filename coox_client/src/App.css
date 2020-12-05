@@ -142,7 +142,7 @@
 .home-page .left-div {
   /* background-color: #f0f2f4; */
   /* background-color:  #99a7b2; */
-  padding: 10px;
+   padding: 10px 0;
   flex: 25%;
   position: relative;
 
@@ -173,6 +173,10 @@
   /* height: 400px; */
 }
 
+.open-menu .dropdown-basic2{
+  color: #fff;
+}
+
 
 .home-page .left-div  .account-settings .drop-down .item {
   /* display: inline; */
@@ -180,28 +184,45 @@
 }
 
 .home-page .left-div .user-profile {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 75px;
-  /* border: 1px solid red; */
+   /* display: flex;
+  justify-content: space-evenly; */
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  max-width: 95vw;
+
   position:fixed;
   top: 0;
   left:20px;
   padding-top: 40px;
-  padding-bottom: 40px;
-  border-top: 1px solid  #b6c0c8;
-  border-bottom: 1px solid  #b6c0c8;
+  padding-bottom: 35px;
+  border-top: 2px solid  #f0f2f4;
+  border-bottom: 2px solid  #f0f2f4;
+    /* border: 1px solid red; */
  
 
 }
 
 .home-page .left-div .user-profile .user-image {
-   flex: 45%;
+   /* flex: 45%; */
+   height: 120px;
+   width: 120px;
+   color:#7699bc;
+   /* border: 1px solid red; */
+   border-radius: 50%;
+   /* display: flex;
+   align-items: initial; */
+
+}
+
+.home-page .left-div .user-profile .user-image-icon {
+   /* flex: 45%; */
    font-size: 120px;
    color:#7699bc;
    /* border: 1px solid red; */
-   display: flex;
-   align-items: initial;
+   /* display: flex;
+   align-items: initial; */
 }
 
 
@@ -210,7 +231,7 @@ TO DO: ADD user profile image styling here
 */
 
 .home-page .left-div .user-profile .user-profile-info {
-  flex: 55%;
+  /* flex: 55%; */
   /* border: 1px solid red; */
   padding-left: 0;
   padding-right: 0;
@@ -276,6 +297,33 @@ TO DO: ADD user profile image styling here
   left: -3px;
 }
 
+.home-page .left-div .user-profile .edit-profile-button {
+  padding: 2px 20px;
+  border-radius: 25px;
+  margin: 10px auto;
+}
+
+.edit-profile-buttons Button {
+  padding: 2px;
+  border-radius: 25px;
+  margin: 10px auto;
+  width: 150px;
+}
+
+.edit-profile-buttons {
+  margin-bottom: 20px;
+}
+
+.delete-profile-button {
+
+  padding: 2px;
+  border-radius: 25px;
+  margin: 10px auto;
+  width: 220px;
+
+}
+
+
 .home-page .center-div {
   padding: 0;
   flex: 45%;
@@ -296,10 +344,9 @@ TO DO: ADD user profile image styling here
 
 .home-page .right-div .right-container {
   /* border: 1px solid red; */
-  position:fixed;
-  top: 5px;
-  bottom: 0;
-  /* right: 20px; */
+  position: relative;
+
+
 }
 
 .home-page .right-div .search-div {
@@ -310,18 +357,41 @@ TO DO: ADD user profile image styling here
    padding: 2px 2px 2px 15px;
    display: flex;
    align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 28%;
+  max-width: 95vw;
+  margin-bottom: 70px;
      
+}
+
+.home-page .right-div .bottom-right {
+  padding-top: 50px;
+}
+
+.results-div {
+  padding-top: 55px;
 }
 
 .home-page .right-div .search-div .search-icon-div {
    flex: 5%;
    font-size: 20px;
    padding:0;
-   color: #6e8291;
    text-align: left;
    background-color: #4d5b66;
    color: #ffffff;
    /* border: 1px solid red; */
+}
+
+.home-page .right-div .search-div .search-icon-div-active {
+    flex: 5%;
+   font-size: 25px;
+   padding:0;
+   color: #00b300;
+   text-align: left;
+   background-color: #4d5b66;
+
 }
 
 .home-page .right-div .search-div .search-form {
@@ -373,8 +443,8 @@ TO DO: ADD user profile image styling here
    padding-top: 10px;
    padding-bottom: 40px;
    margin-top: 20px;
-   border-top: 1px solid  #b6c0c8;
-   border-bottom: 1px solid  #b6c0c8;
+   border-top: 2px solid  #f0f2f4;
+   border-bottom: 2px solid  #f0f2f4;
 
 }
 
@@ -499,6 +569,7 @@ TO DO: ADD user profile image styling here
    border-bottom: 1px solid #f0f2f4;
    /* border: 1px solid red; */
    padding: 0 5px;
+   max-width: 500px;
 }
 
 .post .creator-thumb {
@@ -511,51 +582,51 @@ TO DO: ADD user profile image styling here
    padding-top: 5px;
 }
 
-.post .post-info {
+.post-info {
   /* border: 1px solid red; */
   padding: 0 5px; 
 } 
 
 
-.post .post-info .post-creator-info {
+.post-info .post-creator-info {
   display: flex;
   align-items: center;
   /* border: 1px solid red; */
   padding: 0;
 }
 
-
-.post .post-info .post-creator-info .creator-name {
+.post-info .post-creator-info .creator-name {
   font-weight: bolder;
   font-size: 18px;
   /* border: 1px solid red; */
   
 }
 
-.post .post-info .post-creator-info .divider {
+.post-info .post-creator-info .divider {
   font-size: large;
   color: #6e8291;
   position: relative;
   top: -3px;
 }
 
-.post .post-creator-info .created-at {
+.post-creator-info .created-at {
   color: #6e8291;
  font-size: 16px;
   font-weight: 900;
 }
 
-.post .post-info .post-title {
+.post-info .post-title {
   font-size: 16px;
   box-sizing: border-box;
   width: 100%; 
   /* border: 1px solid rgb(158, 157, 165); */
-  margin-top: -10px;
+  margin-top: -5px;
+  margin-bottom: 3px;
   text-align: initial;
   
 }
 
-.post .post-info .post-image {
+.post-info .post-image {
   width: 480px;
   height: auto;
   border-radius: 10px;
@@ -576,6 +647,7 @@ TO DO: ADD user profile image styling here
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .add-post .add-post-inner {
@@ -583,11 +655,58 @@ TO DO: ADD user profile image styling here
 }
 
 .add-post .add-post-title {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
 
 }
+
+.add-post .add-post-inner .add-user-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.add-post .add-post-inner .image-div .post-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin:0;
+  max-width: 100vw;
+ 
+}
+
+
+
+.add-post .add-post-inner .image-div {
+  /* border: #00b300 1px solid; */
+  position: relative;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+   border-radius: 10px;
+
+}
+
+ .change-image {
+   position: absolute;
+   right: 120px;
+   top:3px;
+   font-size: xx-large;
+   z-index: 100;
+   color: #00b300;
+}
+ .remove-image {
+   position: absolute;
+   right: 80px;
+   top:2px;
+   font-size: 35px;
+   z-index: 100;
+   color: #00b300;
+}
+
 
 .add-post .add-post-inner .post-description-input {
    width: 400px;
@@ -597,12 +716,20 @@ TO DO: ADD user profile image styling here
 }
 
 
-.add-post .add-post-inner .add-post-buttons {
+.add-post .add-post-inner .add-post-buttons, .edit-profile-buttons {
 
   display: flex;
   align-items: center;
-
+  justify-content: space-evenly;
+  width: 450px;
+  max-width: 95vw;
+  margin: auto;
+  /* background-color: red; */
   
+}
+
+.add-post .add-post-inner .add-post-buttons Button {
+   width: 140px;
 }
 
 .add-post .add-post-inner .upload-button {
@@ -629,6 +756,17 @@ TO DO: ADD user profile image styling here
 
 }
 
+.cancel-search-button {
+  border-radius: 25px;
+  padding: 2px 20px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 150px; */
+
+}
+
 
 
 .reaction-buttons {
@@ -640,6 +778,8 @@ TO DO: ADD user profile image styling here
   margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 20px;
+  width: 480px;
+  max-width: 90vw;
   /* border: 1px solid red; */
 }
 
@@ -649,6 +789,295 @@ TO DO: ADD user profile image styling here
 }
 .reaction-buttons div b {
   font-size: 14px;
+
+}
+
+.side-menu{
+  background-color: black;
+  color: #ffffff;
+  height: 100%;
+  transition: 0.5s;
+  overflow-x: hidden;
+  width: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+}
+
+.open-button{
+  position: fixed;
+  padding-left: 10px;
+  color: #00b300;
+}
+
+.close-button{
+  color: #00b300;
+}
+
+/*
+max-width - smaller than
+min-width - bigger than
+*/
+
+/*
+@media(max-width: 1200px){
+  .right-div{display: none;}
+  .center-div{margin-left: 30px;}
+  
+}
+@media(max-width: 950px){
+  .left-div{display: none;}
+}
+
+@media(min-width: 950px){
+  .open-menu{display: none;}
+}
+*/
+/*Media Queries*/
+@media screen and (min-width: 1025px){
+  .open-menu{display: none;}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px){
+  .right-div{display: none;}
+  .open-menu{display: none;}
+  .post-info{width: 90%;}
+  .post-image{
+    max-width: 90%;
+    max-height: auto;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .left-div{display: none;}
+  .open-menu{display: inline-flex;}
+  .center-div{
+    flex: 0%;
+    display: inline;
+    width: 0px;
+  }
+  .post-info{width: 90%;}
+  .post-image{
+    max-width: 300px;
+    max-height: auto;
+  }
+  .add-post{position: absolute;}
+  .comment-reaction-buttons{}
+  .post-item-nav{padding-right: 150px;}
+  .right-div{display: none;}
+  .welcome-title{font-size: xx-large;}
+  .welcome-image{
+    height: auto;
+    width: 80vw;
+    position: relative;
+    margin-bottom: 20vw;
+  }
+  .welcome-message {
+    width: 90vw;
+    height: 40vh;
+    position: absolute;
+    font-size: larger;
+    
+    
+    /* border: 1px red solid; */
+  }
+  .meals-prepped{display: none}
+  .join-message {
+    width: 100vw;
+    height: 0vh;
+    position: relative;
+    left:0px;
+    top: 0vh;
+    z-index: 0;
+    /* border: 1px red solid; */
+    text-align: center;
+  }
+}
+
+.post-comments-title {
+    font-size: 18px;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.no-comments {
+  color:  #6e8291;
+  font-size: 18px;
+  padding: 30px 5px;
+}
+
+.no-comments .no-comment-icon {
+   font-size: 35px;
+}
+
+.navbar {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  height: 70px;
+  /* background-color: red; */
+  margin-bottom: 40px;
+   border-bottom: 1px solid #f0f2f4;
+   z-index: 1200;
+   background-color: #ffffff;
+
+  
+}
+
+.post-item-page {
+ 
+}
+
+.post-item-nav {
+  max-width: 100vw;
+  width: 500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ 
+  /* background-color: #00b300; */
+
+}
+
+.post-item-nav .icon {
+  font-size: 35px;
+  color: #7699bc;
+}
+
+.post-item {
+  position: absolute;
+  top:80px;
+  left:0;
+  right:0;
+  width: 500px;
+  max-width: 100vw;
+  /* background-color: brown; */
+  margin: auto;
+}
+
+.full-heart {
+  color: #006622;
+}
+
+.comment-input {
+   
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-top: 1px solid #b6c0c8;
+  border-bottom: 1px solid #b6c0c8;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  padding: 25px 5px;
+ 
+
+}
+
+.comment-input:focus {
+    outline: none;
+       border-top: 1px solid #b6c0c8;
+  border-bottom: 1px solid #b6c0c8;
+  border-left: none;
+  border-right: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+*:focus {
+    outline: none;
+      border-top: 1px solid #b6c0c8;
+  border-bottom: 1px solid #b6c0c8;
+  border-left: none;
+  border-right: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.submit-comment-icon {
+  font-size: 20px;
+}
+
+.submit-comment-btn {
+  border-top: 1px solid #b6c0c8;
+  border-bottom: 1px solid #b6c0c8;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+
+}
+
+.post-comments-div {
+  margin: 20px 5px;
+  /* background-color: red; */
+}
+
+.share-buttons-div {
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   width: 400px;
+   max-width: 100vw;
+
+  /* background-color: red; */
+
+}
+
+.comment-reaction-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #6e8291;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  /* border: 1px solid red; */
+  width: 350px;
+  max-width: 90vw;
+}
+
+.popular-cooks-empty {
+  color: #8899a6;
+  font-size: large;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.popular-cooks-empty .empty-icon {
+  font-size: 35px;
+  margin: auto;
+
+}
+
+label {
+  font-size: large;
+  /* border: 1px solid red; */
+  width: 100%;
+  text-align: left;
+}
+
+.terms {
+  width: 500px;
+  max-width: 100vw;
+  margin: 10px auto;
+  padding: 20px 0;
+  font-size: medium;
+}
+
+.terms .icon {
+   font-size: 35px;
+  color: #7699bc;
+  margin-right: 20px;
 
 }
 

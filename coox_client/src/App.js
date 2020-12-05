@@ -3,32 +3,31 @@ import './App.css';
 import { SelectWelcomePage} from './components/SelectWelcomePage.js';
 import { HomePage } from './components/HomePage.js';
 
-let Main;
 class App extends React.Component {
 
   render() {  
 
-   // if ('user' in localStorage) {
+    if ('user' in localStorage) {
 
       return (
-        <div className="App">
+        <div id="App" className="App">
 
           <HomePage />
 
         </div>
       );
 
-    // } else {
-    //   return (
-    //     <div className="App">
+    } else {
+      return (
+        <div className="App">
 
-    //       <SelectWelcomePage />
+          <SelectWelcomePage />
 
 
-    //     </div>
-    //   );
+        </div>
+      );
      
-    // }
+    }
 
   }
   // render() {

@@ -1,16 +1,27 @@
 import welcomeImage from '../welcomeImage.jpg';
+import React, { useState, useEffect } from 'react';
+import axios from "axios"; //for api requests
 import { Button } from 'react-bootstrap';
 import { SiCodechef } from 'react-icons/si';
 
-function MealsPrepped() {
-    var started = new Date(2020, 10, 26, 11, 0, 0);
-    var now     = new Date();
-    return (parseInt((started - now)/1000));
-}
+const API_URL = "http://localhost:3005/";
 
 
+const Welcome = () => {
 
-export const Welcome = () => (
+    const [posts, setPosts] = useState('');
+
+    useEffect(() => {
+        //Public posts for unregistered/non-logged in users 
+        axios.get(API_URL + 'publicPosts').then(response => {
+            //  console.log(response.data);
+            setPosts(response.data.length);
+        }).catch(error => {
+            console.log(error);
+        });
+
+    });
+    return (
            <div>
                 <img src={welcomeImage} className="welcome-image" alt="welcome" />
                         <div className="welcome-message">
@@ -20,7 +31,7 @@ export const Welcome = () => (
                             
                         </p>
                         </div>
-                        <div className="meals-prepped">Over <MealsPrepped /> Meals Prepared</div>
+                <div className="meals-prepped">{posts} Posts and Counting...</div>
                 {/* make the number keep changing */ }
                 <div className="join-message">
                     <h3>See Who and What's Cooking</h3>
@@ -33,4 +44,8 @@ export const Welcome = () => (
         
         </div>
 
-);
+   );
+
+}
+
+export default Welcome;

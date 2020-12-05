@@ -1,4 +1,4 @@
-import { Welcome } from './Welcome.js';
+import Welcome from './Welcome.js';
 import LoginForm  from './LoginForm.js';
 import SignupForm from './SignupForm.js';
 
